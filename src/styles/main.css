@@ -4,3 +4,4 @@
 @import './utilities/a11y.css' layer(utilities);
 @import './utilities/prose.css' layer(utilities);
 @import './utilities/chip.css' layer(components);
+@import 'tailwindcss';
