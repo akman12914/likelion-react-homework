@@ -1,6 +1,6 @@
-import Prose from '@/components/prose';
+import Cart from './page/cartPage';
 function App() {
-  return <Prose />;
+  return <Cart />;
 }
 
 export default App;

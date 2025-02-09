@@ -16,9 +16,9 @@
     /* 린팅 */
     "strict": true,
     "noUnusedLocals": true,
+    "noUncheckedSideEffectImports": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["vite.config.ts"]
 }
