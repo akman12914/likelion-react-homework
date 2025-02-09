@@ -1,4 +1,5 @@
 import { CartItemType } from '../types/cartItemtype';
+import Button from './counterButton';
 
 interface CartItemProps {
   item: CartItemType;
@@ -9,13 +10,17 @@ interface CartItemProps {
 const CartItem = ({ item, image, onQuantityChange }: CartItemProps) => {
   return (
     <li>
-      <div>
+      <div className="flex items-center">
         <img src={image} alt={item.name} className="rounded-full w-24" />
-        <h4>{item.name}</h4>
-        <p>{item.price}원</p>
-        <button onClick={() => onQuantityChange(-1)}>-</button>
-        <span>{item.quantity}</span>
-        <button onClick={() => onQuantityChange(1)}>+</button>
+        <div className="product-info py-7 px-3">
+          <h4>{item.name}</h4>
+          <p className="font-bold">{item.price}원</p>
+        </div>
+        <Button
+          onDecrement={() => onQuantityChange(-1)}
+          onIncrement={() => onQuantityChange(1)}
+          quantity={item.quantity}
+        />
       </div>
     </li>
   );

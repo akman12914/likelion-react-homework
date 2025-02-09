@@ -1,18 +1,15 @@
-import { useCart } from '../hooks/cartState';
+interface CartTotalProps {
+  total: number;
+}
 
-const CartSummary = () => {
-  const { cartItems } = useCart();
-
-  const total = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+const CartTotal = ({ total }: CartTotalProps) => {
+  // 총액 계산
 
   return (
-    <div className="cart-summary">
-      <h3>구매 총액: {total.toLocaleString()} 원</h3>
+    <div className="total">
+      <p className="font-bold">총액: {total}원</p>
     </div>
   );
 };
 
-export default CartSummary;
+export default CartTotal;

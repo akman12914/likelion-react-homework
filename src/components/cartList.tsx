@@ -1,8 +1,9 @@
-import CartItem from './cartItem';
 import { useCart } from '../hooks/cartState';
+import CartItem from './cartItem';
+import CartTotal from './cartTotal';
 
-const CartList: React.FC = () => {
-  const { cartItems, updateQuantity } = useCart();
+const CartList = () => {
+  const { cartItems, handleQuantityChange } = useCart();
 
   return (
     <ul>
@@ -10,7 +11,7 @@ const CartList: React.FC = () => {
         <CartItem
           key={item.id}
           item={item}
-          onQuantityChange={(amount) => updateQuantity(item.id, amount)}
+          onQuantityChange={(amount) => handleQuantityChange(item.id, amount)}
           image={item.image}
         />
       ))}
