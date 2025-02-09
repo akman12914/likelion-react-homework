@@ -1,6 +1,6 @@
 ## likelion-4주차 과제 : 장바구니 ui 구현
 
-[이전 likelion-2주차 과제 : Vite 커스텀 스케폴드 템플릿]('https://github.com/akman12914/likelion-react-homework/blob/main/document/2week.md')
+[이전 likelion-2주차 과제 : Vite 커스텀 스케폴드 템플릿](https://github.com/akman12914/likelion-react-homework/blob/main/document/2week.md)
 
 ### 폴더 구조 작성하기
 
