@@ -1,6 +1,6 @@
 import CartList from '../components/cartList';
 import CartTotal from '../components/cartTotal';
-import { useCart } from '@/hooks/cartState';
+import { useCart } from '@/hooks/useCart';
 
 const CartPage = () => {
   const { cartItems, handleQuantityChange } = useCart();

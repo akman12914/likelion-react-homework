@@ -1,4 +1,4 @@
-import { useCart } from '../hooks/cartState';
+import { useCart } from '../hooks/useCart';
 import CartItem from './cartItem';
 import CartTotal from './cartTotal';
 
