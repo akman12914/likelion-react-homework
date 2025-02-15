@@ -1,5 +1,5 @@
 import { tm } from '@/util/tw-merge';
-import { useId } from 'react';
+import { useEffect, useId, useRef } from 'react';
 
 interface SearchFormProps {
   query: string;
@@ -9,9 +9,26 @@ interface SearchFormProps {
 function SearchForm({ query, setQuery }: SearchFormProps) {
   const searchInputId = useId();
 
+   const searchInputRef = useRef<HTMLInputElement>(null);
+
   const handleQuery = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.currentTarget.value);
+    
   };
+
+  useEffect(() => {
+    const searchInput = searchInputRef.current;
+     if (searchInput) {
+
+      setTimeout(() => {
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }, 50);
+    }
+
+  });
+
   return (
     <form className={tm('mb-10')}>
       <label htmlFor={searchInputId} className="sr-only">
@@ -19,6 +36,7 @@ function SearchForm({ query, setQuery }: SearchFormProps) {
       </label>
       <div className={tm('flex gap-1')}>
         <input
+          ref={searchInputRef}
           type="search"
           name="query"
           id={searchInputId}
