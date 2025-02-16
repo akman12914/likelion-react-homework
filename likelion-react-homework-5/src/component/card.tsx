@@ -24,7 +24,10 @@ function Card({ item, onUpdate }: CardProps) {
 
   return (
     <li
-      className={tm('flex flex-col items-center gap-3 aspect-square size-52')}
+      className={tm(
+        'flex flex-col items-center gap-3 aspect-square size-52',
+        'text-center'
+      )}
     >
       <figure
         role="presentation"

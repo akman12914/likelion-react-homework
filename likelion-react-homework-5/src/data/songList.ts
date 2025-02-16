@@ -56,7 +56,7 @@ const songList = [
     time: '4:33',
   },
   {
-    id: '342sdfse42sfd',
+    id: '34fsdfsedsfd',
     title: 'Take A Hint',
     singer: 'Nightcore',
     album: 'Shadow Of your smile',
@@ -64,7 +64,7 @@ const songList = [
   },
   {
     id: '342sdfsewerfd',
-    title: 'territory',
+    title: '나도 사랑하고 싶다',
     singer: '제토',
     album: 'Shadow Of your smile',
     time: '4:33',
@@ -78,7 +78,7 @@ const songList = [
   },
   {
     id: '3werrew42sfd',
-    title: '라이어',
+    title: '꽃처럼 한철만 사랑해 줄 건 가요',
     singer: '김윤아',
     album: 'Shadow Of your smile',
     time: '4:33',
@@ -99,7 +99,7 @@ const songList = [
   },
   {
     id: '342sdwerwesfd',
-    title: '유령 같아',
+    title: '사랑한다면',
     singer: '나나',
     album: 'Shadow Of your smile',
     time: '4:33',

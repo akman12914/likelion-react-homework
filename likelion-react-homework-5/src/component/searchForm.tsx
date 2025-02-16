@@ -25,7 +25,7 @@ function SearchForm({ query, setQuery }: SearchFormProps) {
         }
       }, 50);
     }
-  });
+  }, [searchInputRef]);
 
   return (
     <form className={tm('mb-10')}>
