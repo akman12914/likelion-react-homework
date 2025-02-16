@@ -1,0 +1,11 @@
+@layer base,utilities;
+@import './base.css' layer(base);
+@import './utilities/a11y.css' layer(utilities);
+@import 'tailwindcss';
+@theme {
+  --font-display: 'SAM3KRFONT';
+}
+@font-face {
+  font-family: SAM3KRFONT;
+  src: url('../assets/SAM3KRFONT.TTF');
+}

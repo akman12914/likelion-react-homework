@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { tm } from '@/util/tw-merge';
-import { SongListItem } from '@/pages/search-list/types';
+import { SongListItem } from '@/pages/search-card-list/types';
 import { Heart, HeartSolid } from '@mynaui/icons-react';
 
 interface CardProps {
@@ -23,7 +23,9 @@ function Card({ item, onUpdate }: CardProps) {
   const Icon = isFavorited ? HeartSolid : Heart;
 
   return (
-    <li className={tm('flex flex-col items-center gap-3')}>
+    <li
+      className={tm('flex flex-col items-center gap-3 aspect-square size-52')}
+    >
       <figure
         role="presentation"
         className={tm('size-32 rounded-full', 'relative')}

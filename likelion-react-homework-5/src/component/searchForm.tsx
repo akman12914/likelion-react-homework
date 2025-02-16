@@ -1,5 +1,6 @@
 import { tm } from '@/util/tw-merge';
 import { useEffect, useId, useRef } from 'react';
+import { Search } from '@mynaui/icons-react';
 
 interface SearchFormProps {
   query: string;
@@ -9,24 +10,21 @@ interface SearchFormProps {
 function SearchForm({ query, setQuery }: SearchFormProps) {
   const searchInputId = useId();
 
-   const searchInputRef = useRef<HTMLInputElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   const handleQuery = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.currentTarget.value);
-    
   };
 
   useEffect(() => {
     const searchInput = searchInputRef.current;
-     if (searchInput) {
-
+    if (searchInput) {
       setTimeout(() => {
         if (searchInput) {
           searchInput.focus();
         }
       }, 50);
     }
-
   });
 
   return (
@@ -42,10 +40,7 @@ function SearchForm({ query, setQuery }: SearchFormProps) {
           id={searchInputId}
           value={query}
           onChange={handleQuery}
-          className={tm(
-            'rounded-sm px-2.5 py-1',
-            'bg-white text-react font-medium'
-          )}
+          className={tm('rounded-4xl px-2.5 py-1', 'bg-gray-600')}
         />
         <button
           type="submit"
@@ -57,7 +52,7 @@ function SearchForm({ query, setQuery }: SearchFormProps) {
             'hover:opacity-100'
           )}
         >
-          검색
+          <Search />
         </button>
       </div>
     </form>

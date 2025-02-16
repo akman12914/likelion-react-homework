@@ -1,0 +1,70 @@
+:root {
+  font-size: 62.5%;
+  background-image: url('../assets/pexel.png');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  filter: grayscale(100%);
+  color: white;
+}
+
+body {
+  font-family: 'Pretendard Variable', Pretendard;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+nav ol,
+nav ul {
+  margin-block: 0;
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: break-word;
+}
+
+hr {
+  box-sizing: content-box;
+  overflow: visible;
+  height: 0;
+}
+
+canvas,
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+abbr[title] {
+  cursor: help;
+  text-decoration: none;
+}
+
+:disabled {
+  cursor: not-allowed;
+}
+
+:focus {
+  outline: 0;
+}
+
+:focus-visible {
+  outline: none;
+  /* outline: 2.5px solid var(--focus, white);
+  outline-offset: 0.5px; */
+  box-shadow: 0 0 8px var(--focus, rgba(255, 255, 255, 1));
+  border-radius: 2px;
+}

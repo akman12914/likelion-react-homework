@@ -1,4 +1,4 @@
-import SearchListPage from './pages/search-list/index';
+import SearchListPage from './pages/search-card-list/index';
 function App() {
   return <SearchListPage />;
 }

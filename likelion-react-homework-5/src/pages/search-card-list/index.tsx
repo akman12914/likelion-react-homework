@@ -8,7 +8,7 @@ import { SongListItem } from './types';
 function SearchListPage() {
   const [list, setList] = useState<SongListItem[]>(songList);
   const [query, setQuery] = useState('');
-  
+
   const searchInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -21,7 +21,6 @@ function SearchListPage() {
         }
       }, 1000);
     }
-
   }, []);
 
   const handleUpdateList = (item: SongListItem, isFavorited: boolean) => {
@@ -31,8 +30,10 @@ function SearchListPage() {
   };
 
   return (
-    <section>
-      <h2 className="text-2xl font-medium text-react">카드 검색 리스트</h2>
+    <section className="h-screen w-screen flex flex-col justify-center items-center">
+      <h2 className="flex text-7xl font-medium text-react m-8 font-display">
+        CARD SEARCH LIST
+      </h2>
       <SearchForm query={query} setQuery={setQuery} />
       <SearchedList list={list} query={query} onUpdate={handleUpdateList} />
     </section>
